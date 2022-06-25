@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Codedamn - Quiz Project</title>
+</head>
+
+<body>
+    <header>
+        <a id=leaderboard href="highscores.html">Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </i></a> 
+    <span class="timer">Time:</span>
+    </header>
+    <div class="container">
+        <main>
+       <div class="questions">
+           <h1 class="quiz-question" data-answer=""></h1>
+           <ul class="quiz-options">
+               <li data-index="0" class=" answer answer-options0"></li>
+               <li data-index="1" class="answer answer-options1"></li>
+               <li data-index="2" class="answer answer-options2"></li>
+               <li data-index="3" class="answer answer-options3"></li>
+
+           </ul>
+            <div class="button-container">
+                <button class="info">More Info!</button>
+                <button class="next">Next</button>
+            </div>
+           
+       </div>
+       <div class="wrong-answer hide">
+           INCORRECT!
+       </div>
+        <div class="right-answer hide">
+            CORRECT!
+       </div>
+
+       <div class="more hide">
+        <p class="learn-more"></p>
+        </div>
+
+        <div class="end hide">
+            <h1>All done!</h1>
+            <p class="final-score"></p>
+            <h4>Let's get you on that score board!</h4>
+            <div class="user-details">
+                <form method="POST" action="https://quiz-api-100devs.herokuapp.com/api/scores/add">
+                    Enter name:
+                <input required type="text" id="name"/>
+                <!-- Enter twitter username:
+                <input type="text" id="twitterName"/> -->
+                <input hidden type="text" id="totalTime"/>
+                <input hidden type="text" id="score"/>
+                <div class="button-container">
+                    <button type="submit" id="submit">Submit</button>
+                    <a href="index.html" type="button">Cancel</a>
+                </div>
+                </form>
+                
+            </div>
+        </div>
+           
+        </main>
+        
+    </div>
+   
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
