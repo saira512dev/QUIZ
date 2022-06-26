@@ -107,7 +107,7 @@ moreInfoButton.addEventListener("click", function (e) {
 
 function end(ifTimeIsUp, remainingSeconds) {
   clearInterval(counter);
-  totalTime.value = 150 - remainingSeconds;
+  totalTime.value = 200 - remainingSeconds;
   console.log(remainingSeconds, ifTimeIsUp);
   finalScoreSheet.classList.remove("hide");
   moreInfoCard.classList.add("hide");
