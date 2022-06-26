@@ -7,24 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Codedamn - Quiz Project</title>
+    <title>JS Quiz</title>
 </head>
 
 <body>
     <header>
-        <a id=leaderboard href="highscores.html">Highscores <i class="fas fa-hand-point-left fa-lg"></i>
-        </i></a> 
+        <!-- <a id=leaderboard href="highscores.html">Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </i></a>  -->
     <span class="timer">Time:</span>
+    <span class="points">Score:</span>
     </header>
     <div class="container">
         <main>
        <div class="questions">
            <h1 class="quiz-question" data-answer=""></h1>
            <ul class="quiz-options">
-               <li data-index="0" class=" answer answer-options0"></li>
-               <li data-index="1" class="answer answer-options1"></li>
-               <li data-index="2" class="answer answer-options2"></li>
-               <li data-index="3" class="answer answer-options3"></li>
+               <li data-index="0" class=" answer answer-options0 hide"></li>
+               <li data-index="1" class="answer answer-options1 hide"></li>
+               <li data-index="2" class="answer answer-options2 hide"></li>
+               <li data-index="3" class="answer answer-options3 hide"></li>
 
            </ul>
             <div class="button-container">
@@ -49,18 +50,17 @@
             <p class="final-score"></p>
             <h4>Let's get you on that score board!</h4>
             <div class="user-details">
-                <form method="POST" action="https://quiz-api-100devs.herokuapp.com/api/scores/add">
                     Enter name:
                 <input required type="text" id="name"/>
+                <div class="name-alert hide"></div>
                 <!-- Enter twitter username:
                 <input type="text" id="twitterName"/> -->
                 <input hidden type="text" id="totalTime"/>
                 <input hidden type="text" id="score"/>
                 <div class="button-container">
-                    <button type="submit" id="submit">Submit</button>
-                    <a href="index.html" type="button">Cancel</a>
+                    <button type ="submit"id="submit">Submit</button>
+                    <a href="index.html" >Cancel</a>
                 </div>
-                </form>
                 
             </div>
         </div>
