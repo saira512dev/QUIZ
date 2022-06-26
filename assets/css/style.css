@@ -98,6 +98,11 @@ button {
   font-size: 15px;
 }
 
+.start{
+    margin: 10px 0;
+}
+
+
 #clear-highscores {
   width: 120px;
 }
