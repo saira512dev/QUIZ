@@ -22,7 +22,7 @@ const TwitterName = document.querySelector("#twitterName");
 const totalTime = document.querySelector("#totalTime");
 
 
-let time = 50;
+let time = 200;
 let points = 0;
 let currentIndex = 0;
 let ifCorrectAnswer = false;
