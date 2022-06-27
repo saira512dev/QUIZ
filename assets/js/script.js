@@ -43,10 +43,24 @@ function init() {
   }
 }
 
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+
 async function quiz() {
   const res = await fetch(`${SERVER}/api/js`);
   const data = await res.json();
-  quizQuestion.setAttribute("data-answer", JSON.stringify(data));
+  quizQuestion.setAttribute("data-answer", JSON.stringify(shuffle(data)));
   setQuestions();
 }
 
@@ -56,13 +70,13 @@ function setQuestions() {
   if (currentIndex < questions.length) {
     rightAnswer.classList.add("hide");
     wrongAnswer.classList.add("hide");
-    quizQuestion.innerHTML = questions[currentIndex].question;
+    quizQuestion.innerHTML = currentIndex+1+". "+questions[currentIndex].question;
 
     questions[currentIndex].choices.forEach((choice, j) => {
       let currentChoiceElement = document.querySelector(`.answer-options${j}`);
       console.log(currentChoiceElement.classList.contains('hide'))
      currentChoiceElement.classList.remove("hide")
-      currentChoiceElement.innerHTML = choice;
+      currentChoiceElement.innerHTML = `${choice}`;
     });
     ifCorrectAnswer = false;
   } else end(false, time);
