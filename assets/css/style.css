@@ -240,6 +240,48 @@ input {
   margin: 20px 0;
 }
 
+/* ----------------------------------------------Admin-section--------------------------------------------- */
+
+.admin {
+  flex-direction: column;
+}
+
+.admin h1,h2{
+  margin:35px 0;
+}
+
+.admin h4{
+  font-size: 15px;
+}
+
+.question-container {
+  margin:15px 0;
+}
+
+.row-head,.rows_content{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-direction: rows;
+  margin-bottom: 10px;
+}
+
+.actions{
+  display: flex;
+  gap:5px;
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------Media-Queries----------------------------------------------- */
+
+
 @media only screen and (max-width: 786px) {
   main {
     width: 60%;
@@ -255,6 +297,9 @@ input {
 
   table {
     width: 90%;
+  }
+  .shrink{
+    display:none;
   }
 }
 
