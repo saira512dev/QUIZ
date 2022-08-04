@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Admin-Quiz</title>
+</head>
+<body>
+    <div class="container ">
+       
+        <main class="addQuestions">
+            <h1>Add Your Question</h1>
+            <div class="errors hide"></div>
+            <form action="">
+                <div>
+                    <label for="question">Question</label>
+                    <input required type="text" name="question" id="question">
+                </div>
+                <div>
+                    <label for="choices">Enter choices(Separated by comma)</label>
+                    <input required type="text" name="choices" id="choices">
+                </div>
+                <div>
+                    <label for="answer_index">Answer index(index starts from zero)</label>
+                    <input required type="number" name="answer_index" id="answer_index">  
+                </div>
+                <div>
+                    <label for="info">Info(Give some information/clue for the user)</label>
+                    <input required type="text " name="info" id="info">
+                </div>
+                <button class="submit_question">Add</button>
+                <div class="button-container">
+                    <a href="admin.html">Go Back</a>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
