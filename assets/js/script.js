@@ -58,7 +58,7 @@ function shuffle(array) {
 
 
 async function quiz() {
-  const res = await fetch(`${SERVER}/api/js`);
+  const res = await fetch(`${SERVER}/api/questions/all`);
   const data = await res.json();
   quizQuestion.setAttribute("data-answer", JSON.stringify(shuffle(data)));
   setQuestions();

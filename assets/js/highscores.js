@@ -19,19 +19,21 @@ async function setScores(){
     heading_2.scope = "col";
 
     heading_2.innerHTML = "Name";
-    let heading_3 = document.createElement("th");
+    let heading3 = document.createElement("th");
     // heading_3.scope="col";
 
-    heading_3.innerHTML = "Score";
-    let heading_4 = document.createElement("th");
+    heading3.innerHTML = "Score";
+    let heading4 = document.createElement("th");
+    heading3.classList.add("shrink-3")
     // heading_4.scope="col";
 
-    heading_4.innerHTML = "Time";
+    heading4.innerHTML = "Time";
+    heading4.classList.add("shrink-4")
 
     row_1.appendChild(heading_1);
     row_1.appendChild(heading_2);
-    row_1.appendChild(heading_3);
-    row_1.appendChild(heading_4);
+    row_1.appendChild(heading3);
+    row_1.appendChild(heading4);
 
     thead.appendChild(row_1);
 
@@ -47,16 +49,17 @@ async function setScores(){
       let heading_1 = document.createElement("td");
       heading_1.innerText = i;
       let heading_2 = document.createElement("td");
-      heading_2.classList.add("shrink");
       heading_2.innerText = score.name;
-      let heading_3 = document.createElement("td");
-      heading_3.innerText = score.score;
-      let heading_4 = document.createElement("td");
-      heading_4.innerText = score.time + "s";
+      let heading3 = document.createElement("td");
+      heading3.innerText = score.score;
+      heading3.classList.add("shrink-3");
+      let heading4 = document.createElement("td");
+      heading4.innerText = score.time + "s";
+      heading4.classList.add("shrink-4");
       row_1.appendChild(heading_1);
       row_1.appendChild(heading_2);
-      row_1.appendChild(heading_3);
-      row_1.appendChild(heading_4);
+      row_1.appendChild(heading3);
+      row_1.appendChild(heading4);
 
       tbody.appendChild(row_1);
       table.appendChild(tbody);

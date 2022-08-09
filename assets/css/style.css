@@ -59,17 +59,16 @@ table {
   width: 60%;
 }
 
-   
 tr:nth-child(even) {
-    background-color: rgba(33, 131, 128, 0.5);
+  background-color: rgba(33, 131, 128, 0.5);
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(33, 131, 128, 0.6);
+  background-color: rgba(33, 131, 128, 0.6);
 }
 
-td{
-    border-radius: 5px;
+td {
+  border-radius: 5px;
 }
 
 td,
@@ -98,10 +97,9 @@ button {
   font-size: 15px;
 }
 
-.start{
-    margin: 10px 0;
+.start {
+  margin: 10px 0;
 }
-
 
 #clear-highscores {
   width: 120px;
@@ -242,77 +240,128 @@ input {
 
 /* ----------------------------------------------Admin-section--------------------------------------------- */
 
-.admin {
+.admin table{
+  width:90%;
+}
+
+.dashboard {
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.admin h1,h2{
-  margin:35px 0;
+.admin main {
+ 
 }
 
-.admin h4{
+textarea{
+  width: 75%;
+}
+
+.addQuestions input {
+  width: 75%;
+}
+
+.addQuestions {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center
+}
+
+.admin h1,
+.admin h2 {
+  margin: 35px 0;
+  display: flex;
+  justify-content:center;
+  align-items:center
+}
+
+.admin h4 {
   font-size: 15px;
 }
 
+
 .question-container {
-  margin:15px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: stretch;
+  width:100%;
 }
 
-.row-head,.rows_content{
-  display: flex;
-  justify-content:flex-start;
-  align-items:center;
-  flex-direction: rows;
-  margin-bottom: 10px;
-  gap: 20%;
-}
-.row{
- margin: 7px 0;
-}
 
-.actions{
+.actions {
   display: flex;
-  gap:10px;
+  gap: 10px;
   margin: 7px 0;
 }
 
-.admin button{
+.admin button {
   width: 130px;
   margin: 15px 0;
   cursor: pointer;
+  
 }
 
-.small{
-  width:10%;
+.small {
+  width: 10%;
 }
 
-form div{
+form div {
   margin: 25px 0;
   display: flex;
   flex-direction: column;
 }
-label{
+label {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
+.errors {
+  border-radius: 5px;
+  background: rgba(255, 0, 0, 0.4);
+}
 
+.errors li {
+  list-style: none;
+  margin-bottom: 5px;
+  padding: 5px;
+}
 
-
-
-
-
-
-
-
+.admin .add_questions{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
 
 /* ---------------------------------------------Media-Queries----------------------------------------------- */
 
+@media only screen and (max-width: 956px) {
+
+  textarea{
+    width: 80%;
+  }
+  
+  .addQuestions input {
+    width: 80%;
+  }
+  
+  .admin main{
+    width: 80%;
+  }
+
+  .admin table{
+    width:99%;
+  }
+}
 
 @media only screen and (max-width: 786px) {
+  .admin main{
+    width: 90%;
+  }  
+
   main {
     width: 60%;
     padding: 40px 30px 40px 40px;
@@ -328,8 +377,8 @@ label{
   table {
     width: 90%;
   }
-  .shrink{
-    display:none;
+  .shrink-3 {
+    display: none;
   }
 }
 
@@ -339,6 +388,13 @@ label{
     padding: 10px;
     margin: 10px;
     margin: 130px 10px auto 10px;
+  }
+  .admin main{
+    width:97%;
+  }
+
+  .action-heading {
+    padding: 2px;
   }
 
   h1 {
@@ -357,15 +413,30 @@ label{
     width: 100%;
   }
 
-  td:nth-of-type(4),
-  th:nth-of-type(4) {
+  .admin td:nth-of-type(2){
+    column-span:1
+  }
+
+  .score-container td:nth-of-type(4),
+  .score-container th:nth-of-type(4) {
     display: none;
   }
+  /* .shrink-3 {
+    display: none;
+  } */
+  .actions {
+    flex-direction: column;
+  }
+  
 }
 
 @media only screen and (max-width: 350px) {
-  td:nth-of-type(3),
-  th:nth-of-type(3) {
+  .score-container td:nth-of-type(3),
+  .score-container th:nth-of-type(3) {
     display: none;
+  }
+
+  .admin .add_questions{
+    flex-direction: column;
   }
 }

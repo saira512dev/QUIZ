@@ -11,25 +11,26 @@
 <body>
     <div class="container ">
        
-        <main class="addQuestions">
+        <main class="addQuestions admin">
             <h1>Add Your Question</h1>
             <div class="errors hide"></div>
-            <form action="">
+            <form action="" id = "form">
                 <div>
                     <label for="question">Question</label>
-                    <input required type="text" name="question" id="question">
+                    <textArea name="question" id="question" rows="4" ></textArea>
                 </div>
                 <div>
                     <label for="choices">Enter choices(Separated by comma)</label>
-                    <input required type="text" name="choices" id="choices">
+                    <textArea rows="4" cols="5"type="text" name="choices" id="choices"></textArea>
                 </div>
                 <div>
                     <label for="answer_index">Answer index(index starts from zero)</label>
-                    <input required type="number" name="answer_index" id="answer_index">  
+                    <input  type="number" name="answer_index" id="answer_index">  
                 </div>
                 <div>
                     <label for="info">Info(Give some information/clue for the user)</label>
-                    <input required type="text " name="info" id="info">
+                    <textArea rows="4" cols="5"  type="text " name="info" id="info"></textArea>
+
                 </div>
                 <button class="submit_question">Add</button>
                 <div class="button-container">
