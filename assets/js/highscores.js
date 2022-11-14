@@ -1,5 +1,5 @@
 //const scores = JSON.parse(window.localStorage.getItem('user'));
-const SERVER = "https://quiz-api-100devs.herokuapp.com";
+const SERVER = "https://api-quiz.vercel.app";
 const scoreListParent = document.querySelector(".highscores-list");
 const clearButton = document.querySelector("#clear-highscores");
 const scoreContainer = document.querySelector(".score-container");

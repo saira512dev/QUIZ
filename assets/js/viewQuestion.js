@@ -1,4 +1,4 @@
-const SERVER = "https://quiz-api-100devs.herokuapp.com";
+const SERVER = "https://api-quiz.vercel.app";
 
 let id = window.location.href.split("=")[1];
 try {

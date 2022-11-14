@@ -1,4 +1,4 @@
-const SERVER = "https://quiz-api-100devs.herokuapp.com";
+const SERVER = "https://api-quiz.vercel.app"
 
 const questionContainer = document.querySelector(".question-container");
 const submitQuestionButton = document.querySelector(".submit_question");

@@ -1,4 +1,4 @@
-const SERVER = "https://quiz-api-100devs.herokuapp.com";
+const SERVER = "https://api-quiz.vercel.app";
 
 const form = document.querySelector("form");
 const errorsBox = document.querySelector(".errors");
